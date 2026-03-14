@@ -1,0 +1,32 @@
+NUGET PAKETLERİNİ RESTORE ETME TALİMATLARI
+==========================================
+
+Visual Studio'da NuGet paketlerini restore etmek için aşağıdaki adımları izleyin:
+
+YÖNTEM 1 (Önerilen):
+1. Visual Studio'yu açın
+2. Solution Explorer'da "hashadli" solution'ına sağ tıklayın
+3. "Restore NuGet Packages" seçeneğini seçin
+4. Paketler restore edildikten sonra:
+   - Build > Clean Solution
+   - Build > Rebuild Solution
+
+YÖNTEM 2:
+1. Tools > NuGet Package Manager > Package Manager Console'u açın
+2. Şu komutu çalıştırın:
+   Update-Package -reinstall
+
+YÖNTEM 3:
+1. Solution Explorer'da "hashadli" projesine sağ tıklayın
+2. "Manage NuGet Packages..." seçeneğini seçin
+3. "Installed" sekmesine gidin
+4. "DocumentFormat.OpenXml" paketini bulun
+5. Eğer yüklü değilse, "Restore" butonuna tıklayın
+
+YÖNTEM 4 (Manuel):
+1. Solution Explorer'da projeye sağ tıklayın
+2. "Unload Project" seçin
+3. Tekrar sağ tıklayın ve "Reload Project" seçin
+4. Visual Studio otomatik olarak paketleri restore etmeye çalışacaktır
+
+NOT: Paketler restore edildikten sonra proje hatasız derlenecektir.
