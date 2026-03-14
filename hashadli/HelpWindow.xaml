@@ -1,0 +1,89 @@
+<Window x:Class="hashadli.HelpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Yardım - webdedik › Hash"
+        Height="450" Width="650"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        Background="#F5F5F5">
+    <Border Margin="10" Padding="20" Background="White" CornerRadius="8">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Logo ve başlık -->
+            <StackPanel Grid.Row="0" Margin="0,0,0,10" HorizontalAlignment="Center">
+                <!-- Logo: Kullanıcı, projeye 'webdedik_logo.png' eklemeli -->
+                <Image Source="/webdedik_logo.png"
+                       Height="80"
+                       Stretch="Uniform"
+                       Margin="0,0,0,10"/>
+                <TextBlock Text="Hash Hesaplayıcı - Yardım"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="#333"
+                           HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <!-- Yardım metni -->
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <TextBlock TextWrapping="Wrap"
+                           Foreground="#333"
+                           FontSize="13"
+                           LineHeight="20">
+                    <Run Text="Bu uygulama ile dosyalarınızın hash değerlerini hesaplayabilirsiniz."/>
+                    <LineBreak/><LineBreak/>
+                    <Run Text="Desteklenen Hash Algoritmaları:" FontWeight="Bold"/>
+                    <LineBreak/>
+                    <Run Text="• MD5 (Message Digest 5) - 128 bit hash değeri"/>
+                    <LineBreak/>
+                    <Run Text="• SHA1 (Secure Hash Algorithm 1) - 160 bit hash değeri"/>
+                    <LineBreak/><LineBreak/>
+                    <Run Text="Not: Ayarlar menüsünden hangi hash algoritmalarının hesaplanacağını seçebilirsiniz. Varsayılan olarak MD5 ve SHA1 aktif durumdadır."/>
+                    <LineBreak/><LineBreak/>
+                    <Run Text="Özellikler:" FontWeight="Bold"/>
+                    <LineBreak/>
+                    <Run Text="• Dosya hash hesaplama (birden fazla dosya, dinamik Seç butonları)"/>
+                    <LineBreak/>
+                    <Run Text="• Klasör hash hesaplama (klasör/dosya sayısı, mavi renkle klasör vurgusu)"/>
+                    <LineBreak/>
+                    <Run Text="• İki klasör karşılaştırma (aynı, farklı, bulunamayan ve fazla olan dosyalar renkli olarak)"/>
+                    <LineBreak/>
+                    <Run Text="• İki dosya karşılaştırma (dosya yolu, boyut ve tüm hash değerlerini karşılaştırma, PDF çıktısı)"/>
+                    <LineBreak/>
+                    <Run Text="• Tüm sonuçları PDF olarak dışa aktarma (dosya, klasör ve karşılaştırma raporları)"/>
+                    <LineBreak/>
+                    <Run Text="• PDF çıktılarında tarih/saat bilgisi gösterimi ayarlanabilir"/>
+                    <LineBreak/><LineBreak/>
+                    <Run Text="Daha fazla bilgi ve destek için:" FontWeight="Bold"/>
+                    <LineBreak/>
+                    <Run Text="www.webdedik.com"/>
+                    <LineBreak/><LineBreak/>
+                    <Run Text="İletişim:" FontWeight="Bold"/>
+                    <LineBreak/>
+                    <Run Text="info@webdedik.com"/>
+                    <LineBreak/>
+                    <Run Text="https://www.webdedik.com/iletisim adresinden bizimle iletişime geçebilirsiniz."/>
+                    <LineBreak/><LineBreak/>
+                    <Run Text="webdedik - yazılım, teknoloji ve dijital kültür topluluğu"/>
+                </TextBlock>
+            </ScrollViewer>
+
+            <!-- Kapat butonu -->
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+                <Button Content="Kapat"
+                        Width="90"
+                        Height="30"
+                        Margin="0,0,0,0"
+                        Background="#4A90E2"
+                        Foreground="White"
+                        Click="BtnClose_Click"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
+
